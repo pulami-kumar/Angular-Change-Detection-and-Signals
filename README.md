@@ -10,3 +10,4 @@
 2. Used signals.
 3. Angular Version: 18
 4. .NET Core Web API: .NET 8
+5. No database used. Used in memory to store data.

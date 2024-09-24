@@ -1,0 +1,35 @@
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  .title-content {
+    text-align: center;
+  }
+
+  .content {
+    .sec {
+      color: red;
+    }
+
+    .display-value.changed {
+      color: green;
+    }
+  }
+
+  .translate-button {
+    height: 40px;
+    width: 140px;
+    border-style: none;
+    background-color: #0147ae;
+    color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

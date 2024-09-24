@@ -1,0 +1,13 @@
+.course-dialog {
+  .mat-mdc-dialog-container .mat-mdc-dialog-title + .mat-mdc-dialog-content {
+    padding: 15px 20px 0 20px;
+  }
+
+  .mat-mdc-dialog-container .mat-mdc-dialog-title {
+    margin-bottom: 6px;
+  }
+}
+
+.mat-mdc-dialog-surface.mdc-dialog__surface {
+  border-radius: 10px;
+}

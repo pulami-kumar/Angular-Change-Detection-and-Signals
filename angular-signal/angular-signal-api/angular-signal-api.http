@@ -1,0 +1,5 @@
+@angular_signal_api_HostAddress = https://localhost:44382
+
+GET {{angular_signal_api_HostAddress}}/api/Course/getAllCourses
+Accept: application/json
+

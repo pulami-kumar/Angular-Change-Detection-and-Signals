@@ -1,0 +1,29 @@
+<div class="wrapper">
+    <div class="title-content">
+        <h3>Signal Component</h3>
+        <p>Angular own Change Detection</p>
+    </div>
+
+    <div class="content">
+        Translating the word with in 
+        <span class="sec">
+            {{remainingTime()}}s
+        </span>
+        : 
+        
+        <span 
+            class="display-value"
+            [class.changed] = "isChanged()"
+        >
+            {{displayingValue()}}
+        </span>
+    </div>
+
+    @if (isChanged()) {
+        <div class="translate-button-content">
+            <button class="translate-button" (click)="startTimer()">
+                Re-Translate
+            </button>
+        </div>
+    }
+</div>

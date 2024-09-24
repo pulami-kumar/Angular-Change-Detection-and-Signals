@@ -1,0 +1,38 @@
+<div class="course-list-wrapper">
+  <div class="header-content">
+    <h5>Courses</h5>
+    <button class="btn btn-success" (click)="onCreate()">New Course</button>
+  </div>
+
+  <div class="course-list">
+    <mat-tab-group animationDuration="0ms">
+      <mat-tab label="Beginner">
+        <div class="course-card">
+          <app-course-card
+            [courseList]="beginnerCourses()"
+            (courseEditEvent)="onEdit($event)"
+            (courseDeleteEvent)="onDelete($event)"
+          ></app-course-card>
+        </div>
+      </mat-tab>
+      <mat-tab label="Intermediate">
+        <div class="course-card">
+          <app-course-card
+            [courseList]="intermediateCourses()"
+            (courseEditEvent)="onEdit($event)"
+            (courseDeleteEvent)="onDelete($event)"
+          ></app-course-card>
+        </div>
+      </mat-tab>
+      <mat-tab label="Advanced">
+        <div class="course-card">
+          <app-course-card
+            [courseList]="advancedCourses()"
+            (courseEditEvent)="onEdit($event)"
+            (courseDeleteEvent)="onDelete($event)"
+          ></app-course-card>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>

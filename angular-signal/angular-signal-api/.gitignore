@@ -1,0 +1,47 @@
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+bin/
+obj/
+out/
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+*.sln.iml
+
+# User-specific files
+*.rsuser
+*.sln.ide
+
+# Logs
+*.log
+
+# Packages
+*.nupkg
+*.snupkg
+
+# Publish output
+publish/
+
+# Dependencies
+project.lock.json
+project.fragment.lock.json
+*.d.ts
+
+# Other
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.cache

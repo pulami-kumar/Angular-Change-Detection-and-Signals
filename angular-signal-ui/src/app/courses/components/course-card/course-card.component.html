@@ -1,0 +1,32 @@
+<div class="course-card-wrapper">
+    @for (course of courseList(); track $index) {
+        <div class="course-card">
+            <div class="course-header">
+                <span>{{course.title}}</span>
+            </div>
+            <div class="course-body">
+                <p>{{course.description}}</p>
+                <span>
+                    <strong>
+                        Price:
+                    </strong>
+                     ${{course.price}}
+                </span>
+            </div>
+            <div class="course-action">
+                <button 
+                    class="btn btn-primary"
+                    (click)="onEdit(course.id)"
+                >
+                    Edit
+                </button>
+                <button 
+                    class="btn btn-danger"
+                    (click)="onDelete(course.id)"
+                >
+                    Delete
+                </button>
+            </div>
+        </div>
+    }
+</div>

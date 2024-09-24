@@ -1,0 +1,63 @@
+<h2 mat-dialog-title>{{dialogTitle()}}</h2>
+
+@if (data.dialogType !== courseDialogTypeEnum.Delete) {
+  <mat-dialog-content >
+    <form class="course-form" [formGroup]="courseForm">    
+      <mat-form-field class="form-field" [appearance]="'outline'">
+        <mat-label>Title</mat-label>
+        <input
+        matInput
+        placeholder="Course Title"
+        formControlName="title"
+        required
+        />
+      </mat-form-field>
+      
+      <mat-form-field class="form-field" [appearance]="'outline'">
+        <mat-label>Description</mat-label>
+        <input
+        matInput
+        placeholder="Course Description"
+        formControlName="description"
+        required
+        />
+      </mat-form-field>
+      
+      <app-course-category-dropdown
+        [(category)] = "courseCategory"
+        class="form-field"
+      />
+      <!-- </mat-form-field> -->
+      
+      <mat-form-field class="form-field" [appearance]="'outline'">
+        <mat-label>Price</mat-label>
+        <input
+        matInput
+        placeholder="Course Price"
+        formControlName="price"
+        pattern="0-9"
+        required
+        />
+      </mat-form-field>
+    </form>
+  </mat-dialog-content>
+}@else{
+  <mat-dialog-content>
+    <span>Are you sure you want to delete this course?</span>
+  </mat-dialog-content>
+}
+<mat-dialog-actions class="dialog-action-button w-100 d-flex gap-2">
+    <button 
+      class="btn" 
+      [ngClass]="data.dialogType !== courseDialogTypeEnum.Delete ? 'btn-success' : 'btn-danger'"
+      (click)="onSuccessClick()"
+    >
+      {{dialogButton()}}
+    </button>
+    <button
+      mat-dialog-close
+      class="btn btn-secondary"
+    >
+      Cancel
+    </button>
+</mat-dialog-actions>
